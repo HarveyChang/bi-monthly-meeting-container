@@ -60,8 +60,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /(.*)
-            pathType: Prefix
+          - path: /*
+            pathType: ImplementationSpecific # Prefix
             backend:
               service:
                 name: hello-service
