@@ -1,6 +1,11 @@
 
 
 
+
+
+[L00_Prerequisitie](./Labs/L00_Prerequisitie.md)
+
+
 ```bash
 
 sudo usermod -aG docker $USER && newgrp docker
