@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: hello
-  replicas: 5
+  replicas: 1
   strategy:
     type: RollingUpdate
   template:
@@ -24,6 +24,13 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              cpu: "100m"  # Minimum CPU requested
+              memory: "256Mi"  # Minimum memory requested
+            limits:
+              cpu: "200m"  # Maximum CPU allowed
+              memory: "512Mi"  # Maximum memory allowed
 ---
 #
 # Service
