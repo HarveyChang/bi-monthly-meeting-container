@@ -84,42 +84,43 @@
     kubectl apply -f deployment.yaml
     ```
 
-3. retrive the info. of Pods
+    In [this deployment](../minikube/deployment.yaml), 
+    we only deploy 1 pod with `replicas: 1`.
+
+3. simulate large amounts of access to test.
+
+   In `access_app.sh`, 
+   we will run 50 times `curl http://...` and collect the Pod name from response.
+
     ```
-    kubectl get pod
+    cd ~/bi-monthly-meeting-container/minikube
+    bash ./access_app.sh
     ```
 
-    see only one Pod.
+    we will get only one line response (because we only deploy one Pod).
 
-4. Retrive the IP address of the control panel
-    ```
-    minikube ip
-    ```
+    ![lb04_minikube_app_1_response](./images/lb04_minikube_app_1_response.png)
 
-    usually is `192.168.49.2`
+    hello-deployment-< Pod's name >
+    
 
-5. access the App.
-    ```
-    curl http://192.168.49.2 -w "\n\n"
-    ```
-    Response:
-    ![lb04_minikube_app_response](./images/lb04_minikube_app_response.png)
+## Task 4 - scale up in manual
 
-    `hello-deployment-< .... >` is Pod's name
-
-## Task 4 - scale up (manual)
-
-1. ___
+1. scale to 10 replicas
     ```
     kubectl scale deployment hello-deployment --replicas=10
+    ```
+
+    list all Pods
+    ```
     kubectl get pod
     ```
-    ==snapshot==
 
 
-2. ___
-    run 50 times to `curl` app, 
-    collect the Pod name from response.
+2. simulate large amounts of access to test.
+
+   In `access_app.sh`, 
+   we will run 50 times `curl http://...` and collect the Pod name from response.
 
     ```
     cd ~/bi-monthly-meeting-container/minikube
@@ -131,22 +132,22 @@
 
 ## Task 5 - cleanup
 
-1. __
-```
-kubectl delete -f deployment.yaml
-minikube stop
-```
+1. (optional) remove Pod & stop Minikube
+    ```
+    kubectl delete -f deployment.yaml
+    minikube stop
+    ```
 
-2. disconnect `SSH`
-```
-`Ctrl + D` or exit
-```
+2. disconnect `SSH` (and back to GCP Cloud Shell)
+    ```
+    `Ctrl + D` or exit
+    ```
 
-3. __
-```
-cd ~/bi-monthly-meeting-container/GCE
-terraform destroy -auto-approve
-```
+3. remove the VM `terraform-vm`
+    ```
+    cd ~/bi-monthly-meeting-container/GCE
+    terraform destroy -auto-approve
+    ```
 
 ## (optional) Remove GCP Project
 
