@@ -9,6 +9,8 @@
 1. initialize a Terraform workspace containing configuration files and installs plugins for required providers.
 
     ```
+    cd ~
+    git clone --recurse-submodules https://github.com/HarveyChang/bi-monthly-meeting-container.git --depth=1
     cd ~/bi-monthly-meeting-container/GCE
     terraform init
     ```
