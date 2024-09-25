@@ -2,8 +2,14 @@
 
 Container 特點：
 - 容器依賴底層的作業系統核心，並只包含應用程式所需的庫和依賴。
-高資源效率，源於仰賴並共享底層作業系統核心。
-- 啟動速度快，時間極短。
+- 容器運作需要安裝 Container Engine。
+- 容器間共享同一個作業系統核心，因此資源使用較為輕量。
+- 啟動速度快，所需時間極短，適合用於擴展。
+
+練習說明：
+- 有別於 GCP Console 的操作，體驗直接透過 `gcloud` 指令建立 VM、virtual Network、Firewall rules。
+- 了解安裝 Container Engine 過程。
+- 下載本次 Hands-on 需要的 source。
 
 
 ## Task 1 - Create GCP Project and set active project
