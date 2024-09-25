@@ -15,7 +15,7 @@
 
 2. constructs an execution plan
     ```
-    terraform plan -out=docker-vm-deployment
+    terraform plan -out=vm-deployment
     ```
 
     若遇到這個錯誤訊息，請再次檢查 GCP Active Project 的設定.
@@ -23,15 +23,15 @@
 
 3. executes the actions proposed in a Terraform plan to create
     ```
-    terraform apply docker-vm-deployment
+    terraform apply vm-deployment
     ```
 
 
 ## Task 2 - connect to VM and start Minikube
 
-1. connect to the new VM `docker-vm`
+1. connect to the new VM `terraform-vm`
     ```
-    gcloud compute ssh docker-vm --zone=asia-east1-a
+    gcloud compute ssh terraform-vm --zone=asia-east1-a
     ```
 2. be able to run docker without `sudo`:
     ```

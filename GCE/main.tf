@@ -2,8 +2,8 @@ data "google_client_config" "default" {}
 
 
 # 建立 GCE Instance
-resource "google_compute_instance" "docker_vm" {
-  name         = "docker-vm"
+resource "google_compute_instance" "terraform_vm" {
+  name         = "terraform-vm"
   machine_type = var.machine_type
   zone         = var.zone
 
@@ -15,7 +15,7 @@ resource "google_compute_instance" "docker_vm" {
   }
 
   network_interface {
-    network    = google_compute_network.docker_network.name
+    network    = google_compute_network.terraform_network.name
     # subnetwork = google_compute_subnetwork.subnet.name
 
     # 分配外部 IP
