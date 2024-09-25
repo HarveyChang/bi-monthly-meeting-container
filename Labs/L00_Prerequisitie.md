@@ -1,5 +1,9 @@
 # Prerequisite
 
+Container 特點：
+- 容器依賴底層的作業系統核心，並只包含應用程式所需的庫和依賴。
+高資源效率，源於仰賴並共享底層作業系統核心。
+- 啟動速度快，時間極短。
 
 
 ## Task 1 - Create GCP Project and set active project
@@ -147,5 +151,5 @@ wait 1 min ~
 
 ```
 cd ~
-git clone https://github.com/HarveyChang/bi-monthly-meeting-container.git --depth=1
+git clone --recurse-submodules https://github.com/HarveyChang/bi-monthly-meeting-container.git --depth=1
 ```
