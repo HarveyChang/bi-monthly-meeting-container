@@ -1,4 +1,4 @@
-# Lab 04 - Terraform and Minikube
+# Lab 04 - Container Orchestration
 
 ==change the name of VM==
 
