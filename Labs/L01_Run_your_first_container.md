@@ -57,11 +57,10 @@ Lab 說明：
     We will observe the content of response is same as `~/bi-monthly-meeting-container/site-content/index.html`.
 
         
-    (optional) 使用下列指令取得 VM 的 public ip 後，用瀏覽器訪問可以看到網頁顯示內容。
-
-    ```
-    curl -s ipinfo.io/ip -w "\n\n"
-    ```
+    > (optional) 使用下列指令取得 VM 的 public ip 後，用瀏覽器訪問可以看到網頁顯示內容。
+    > ```
+    > curl -s ipinfo.io/ip -w "\n\n"
+    > ```
 
 4. Close and delete this container.
     

@@ -131,6 +131,8 @@ Lab 說明：
     gcloud compute ssh docker-vm --zone=asia-east1-a
     ```
 
+    > 第一次執行時會有提示訊息需要回應，依序輸入：y, `enter`鍵, `enter`鍵。
+
 
 ## Task 4 - Test `git`, `docker` and `docker-compose` commands
 
@@ -157,7 +159,7 @@ wait 1 min ~
     ```
 
 
-## Task 5 - Git Clone codes for this hands-on in VM
+## Task 5 - Git Clone codes for this hands-on **in VM**
 
 ```
 cd ~

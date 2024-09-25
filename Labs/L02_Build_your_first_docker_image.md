@@ -3,12 +3,12 @@
 Lab 說明：
 Lab 02 將延續 Lab 01 介紹 `Dockerfile`、`docker build`。
 
-這邊我們將編譯 [Dockerfile](..\spring-boot-hello-world\Dockerfile)
-可以點擊 link 或是透過下列 cmd 來顯示 `Dockerfile` 內容：
+這邊我們將編譯 [Dockerfile](..\spring-boot-hello-world\Dockerfile) 來產生我們要的 Docker image，可以點擊 link 檢視內容。
 
-```
-cat ~/bi-monthly-meeting-container/spring-boot-hello-world/Dockerfile
-```
+> 也可以透過下列 cmd 來顯示 `Dockerfile` 內容：
+> ```
+> cat ~/bi-monthly-meeting-container/spring-boot-hello-world/Dockerfile
+> ```
 
 `Dockerfile` 內容如下：
 ```
@@ -65,11 +65,10 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/spring
     curl http://localhost:80 -w "\n\n"
     ```
     
-     (optional) 使用下列指令取得 VM 的 public ip 後，用瀏覽器訪問可以看到網頁顯示內容。
-
-    ```
-    curl -s ipinfo.io/ip -w "\n\n"
-    ```
+    > (optional) 使用下列指令取得 VM 的 public ip 後，用瀏覽器訪問可以看到網頁顯示內容。
+    > ```
+    > curl -s ipinfo.io/ip -w "\n\n"
+    > ```
 
 
 4. Close and delete this container.

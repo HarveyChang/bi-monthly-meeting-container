@@ -1,6 +1,25 @@
 # Lab 04 - Container Orchestration
 
-==change the name of VM==
+Container Orchestration: 自動化部署、管理、擴展和監控容器化應用。
+
+Kubernetes: 開源的容器編排平台，具有高可用性、資源管理和自動化運維等優點。
+
+Infrastructure as Code (IaC): 通過編寫代碼來自動化配置和管理 IT 資源，如伺服器、網絡、存儲和虛擬機。
+
+IaC 解決了傳統手動操作存在的挑戰，包括：人為錯誤、不易擴展、多重環境管理。
+
+常見的 IaC 工具包括：
+
+- 雲原生
+    - Azure Resource Manager
+    - AWS CloudFormation
+    - Google Cloud Deployment Manager 
+- Terraform
+- Ansible
+- Chef/Puppet
+
+本 Lab 將運用 Terraform 來準備練習環境，並使用專為本地開發和測試 Kubernetes 應用的工具 － Minikube。
+
 
 ## Task 1 - Install GCE via Terraform
 
