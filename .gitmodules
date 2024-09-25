@@ -1,6 +1,3 @@
 [submodule "spring-boot-hello-world"]
 	path = spring-boot-hello-world
 	url = https://github.com/HarveyChang/spring-boot-hello-world.git
-[submodule "dockercompose-springboot-mysql-nginx"]
-	path = dockercompose-springboot-mysql-nginx
-	url = https://github.com/HarveyChang/dockercompose-springboot-mysql-nginx.git
