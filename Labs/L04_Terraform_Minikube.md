@@ -58,7 +58,7 @@
 4. Git Clone codes for this hands-on **in VM**
     ```
     cd ~
-    git clone https://github.com/HarveyChang/bi-monthly-meeting-container.git --depth=1
+    git clone --recurse-submodules https://github.com/HarveyChang/bi-monthly-meeting-container.git --depth=1
     cd ~/bi-monthly-meeting-container/minikube
     ```
 
