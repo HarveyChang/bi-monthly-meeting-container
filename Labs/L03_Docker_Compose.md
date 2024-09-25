@@ -47,11 +47,15 @@
 ## Clean-up: Remove GCP Compute Engine docker-vm
 
 1. disconnect `SSH`
-    ```
-    `Ctrl + D` or exit
-    ```
 
-2. back to GCP Cloud Shell, remove this VM
+    In `SSH` session in VM, 
+    
+    key press `Ctrl + D` or type `exit` command.
+
+    you will back to GCP Cloud Shell and see the Cloud Shell terminal info.
+    
+
+2. remove this VM
 
     ```
     gcloud compute instances delete docker-vm --zone=asia-east1-a --quiet
