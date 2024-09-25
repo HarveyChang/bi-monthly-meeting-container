@@ -160,9 +160,12 @@ IaC 解決了傳統手動操作存在的挑戰，包括：人為錯誤、不易�
     ```
 
 2. disconnect `SSH` (and back to GCP Cloud Shell)
-    ```
-    `Ctrl + D` or exit
-    ```
+
+    In `SSH` session in VM, 
+    
+    key press `Ctrl + D` or type `exit` command.
+
+    you will back to GCP Cloud Shell and see the Cloud Shell terminal info.
 
 3. remove the VM `terraform-vm`
     ```
