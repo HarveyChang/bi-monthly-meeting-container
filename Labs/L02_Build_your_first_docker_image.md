@@ -16,6 +16,12 @@
     docker build --tag 'spring-boot-helloworld' .
     ```
 
+    show images are present locally, you can see the docker image `spring-boot-helloworld`
+    ```
+    docker images
+    ```
+    ![lb02_docker_images_after_built](./images/lb02_docker_images_after_built.png)
+
 2. Run container
     ```
     docker run -d -p 80:8080 spring-boot-helloworld
