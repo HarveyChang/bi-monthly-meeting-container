@@ -79,5 +79,14 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/spring
 
 
 ## Question
-
-要怎麼進行 Docker Image 的瘦身？
+1. 要怎麼進行 Docker Image 的瘦身？
+2. Lab 01 的案例要怎麼修改，才可以改變執行方法不需要指定 `-v`？
+    從：
+    ```
+    docker run --rm -d -p 80:80 --name web -v ./site-content:/usr/share/nginx/html:ro nginx
+    ```
+    變成：
+    ```
+    docker run --rm -d -p 80:80 --name web <some image>
+    ```
+3. 承上，兩者的差異在哪？

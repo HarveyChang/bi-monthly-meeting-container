@@ -121,6 +121,10 @@ Lab 說明：
         '
     ```
 
+    上面的指令會透過 `metadata` 在 VM 建立完成後，背景執行指定的 script。
+
+    以此案例會進行我們 Hands-on 所需要的工具安裝。
+
 2. connect to VM `docker-vm`
 
     ```
@@ -132,7 +136,7 @@ Lab 說明：
 
 wait 1 min ~
 
-1. for be able to run docker without `sudo`:
+1. **important!** for be able to run docker without `sudo`:
     ```
     sudo usermod -aG docker $USER && newgrp docker
     ```
@@ -159,3 +163,6 @@ wait 1 min ~
 cd ~
 git clone --recurse-submodules https://github.com/HarveyChang/bi-monthly-meeting-container.git --depth=1
 ```
+
+## Questions
+1. VM 上面能夠直接運行 Docker（Container） 嗎？

@@ -83,6 +83,7 @@ Lab 說明：
     可以觀察到停止&刪除後的Container狀況。
 
 
-## Question
+## Questions
 
-要怎麼做才可以在 VM 上執行多個 Nginx 的 Docker Container？
+1. Lab 中的 Nginx container 的服務運行在 port 80，要怎麼改到 port 8080？
+2. 要怎麼做才可以在 VM 上執行多個 Nginx 的 Docker Container？
