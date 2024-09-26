@@ -127,7 +127,9 @@ networks:
     key press `Ctrl + D` or type `exit` command.
 
     you will back to GCP Cloud Shell and see the Cloud Shell terminal info.
-    
+
+    **must check terminal**:
+    > GCP_USERNAME@cloudshell:~$    
 
 2. remove this VM
 
