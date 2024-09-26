@@ -6,7 +6,7 @@
 
 > 也可以透過下列 cmd 來顯示 `docker-compose.yaml` 內容：
 > ```
-> cat ~/bi-monthly-meeting-container/spring-boot-hello-world/Dockerfile
+> cat ~/bi-monthly-meeting-container/dockercompose-springboot-mysql-nginx/docker-compose.yaml
 > ```
 
 `docker-compose.yaml` 內容如下：
