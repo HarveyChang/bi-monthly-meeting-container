@@ -158,7 +158,20 @@ networks:
     ```
     gcloud compute networks delete docker-network --quiet
     ```
-    
+
+## (optional) Remove GCP Project
+
+gcloud projects delete pcalt-docker-<員工編號>
+```
+gcloud projects delete pcalt-docker-123456
+```
+
+Prompt message:
+> Your project will be deleted.
+> 
+> Do you want to continue (Y/n)?
+
+keyin: Y or <Enter> button
 
 ## Questions
 

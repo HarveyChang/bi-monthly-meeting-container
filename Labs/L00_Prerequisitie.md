@@ -18,26 +18,53 @@ Lab 說明：
 
 2. Navigate directly to [New Project](https://console.cloud.google.com/projectcreate)
 
-3. We need to create a New GCP Project called `pcalt-docker-<員工編號>`
+3. We need to create a New GCP Project called `pcalt-docker-<employee_id>`
 
     for example: 
-    ```
-    員工編號：123456
-    新增專案名稱：pcalt-docker-123456
-    ```
+    > 
+    > 員工編號：123456
+    > 
+    > 新增專案名稱：pcalt-docker-123456
+    
     ![create_new_project](./images/create_new_project.png)
 
 4. Open `Cloud Shell`
 
     ![cloud_shell_in_console](./images/cloud_shell_in_console.png)
 
-5. switch the Active GCP 'ProjectID' to `pcalt-docker-<員工編號>`
+    > Optional
+    > 
+    > Navigate direct to [Cloud Shell Editor](https://shell.cloud.google.com/)
 
+5. switch the Active GCP Project to your project `pcalt-docker-<employee_id>`
+
+    **important**
+    > 
+    > Because it is possible that `<Project Name>` and `<Project ID>` are different.
+    >
+
+    首先，使用 環境變數 來存我們的 `pcalt-docker-<employee_id>`
     ```
-    gcloud config set project pcalt-docker-123456
+    PROJECT_NAME=pcalt-docker-<employee_id>
     ```
 
-    ![set_active_project](./images/set_active_project.png)
+    確認環境變數
+    ```
+    echo "Project Name: ${PROJECT_NAME}"
+    ```
+
+    switch active project to our project - `pcalt-docker-<employee_id>`
+    ```
+    PROJECT_ID=$(gcloud projects list --filter="name=${PROJECT_NAME}" --format="value(projectId)")
+    gcloud config set project ${PROJECT_ID}
+    ```
+
+    success! 
+    ![set_project_via_env](images/set_project_via_env.png)
+
+    > 若遇到提示訊息請輸入: y / <Enter> button
+    > ![set_active_project_q1](images/set_active_project_q1.png)
+
 
 6. check Active GCP `ProjectID` again
 
@@ -47,17 +74,27 @@ Lab 說明：
 
     ![get_active_project](./images/get_active_project.png)
 
-    ```
-    pcalt-docker-123456
-    ```
+    > 
+    > pcalt-docker-<employee_id>
+    > 
+
+    <employee_id>: 員工編號
+
+    > you will recieve `<Project ID>`, not `<Project Name>`
+
 
 ## Task 2 - Create virtual network and firewall rules
+
+An environment for independent work will be prepared here.
 
 1. Create VPC `docker-network`
 
     ```
     gcloud compute networks create docker-network --subnet-mode=custom
     ```
+
+    可能會遇到提示－enable API，請按 `<y>`
+    > API [compute.googleapis.com] not enabled on project [pcalt-docker-434741-436801]. Would you like to enable and retry (this will take a few minutes)? (y/N)?
 
 2. Create subnet `docker-subnetwork`
 
@@ -133,6 +170,10 @@ Lab 說明：
 
     > 第一次執行時會有提示訊息需要回應，依序輸入：y, `enter`鍵, `enter`鍵。
 
+    and then you will see the terminal:
+    > GCP_USERNAME@docker-vm:~$
+
+    it mean you has logged into the VM.
 
 ## Task 4 - Test `git`, `docker` and `docker-compose` commands
 
