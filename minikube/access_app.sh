@@ -16,3 +16,4 @@ done
 unique_results=$(printf "%s\n" "${results[@]}" | sort -u)
 
 echo "$unique_results"
+echo "------------------------------------------"
