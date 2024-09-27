@@ -2,7 +2,7 @@
 
 這邊示範的是透過 `docker-compose` 來組合運行多個 Container。
 
-我們準備的 [docker-compose.yaml](..\dockercompose-springboot-mysql-nginx\docker-compose.yaml) 如下：
+我們準備的 [docker-compose.yaml](https://github.com/HarveyChang/dockercompose-springboot-mysql-nginx/blob/master/docker-compose.yaml) 如下：
 
 > 也可以透過下列 cmd 來顯示 `docker-compose.yaml` 內容：
 > ```

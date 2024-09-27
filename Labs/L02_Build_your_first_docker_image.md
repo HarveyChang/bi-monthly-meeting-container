@@ -3,7 +3,7 @@
 Lab 說明：
 Lab 02 將延續 Lab 01 介紹 `Dockerfile`、`docker build`。
 
-這邊我們將編譯 [Dockerfile](..\spring-boot-hello-world\Dockerfile) 來產生我們要的 Docker image，可以點擊 link 檢視內容。
+這邊我們將編譯 [Dockerfile](https://github.com/HarveyChang/spring-boot-hello-world/blob/818c4c7cea2a8c2918007b0c40d203e02fba1e26/Dockerfile) 來產生我們要的 Docker image，可以點擊 link 檢視內容。
 
 > 也可以透過下列 cmd 來顯示 `Dockerfile` 內容：
 > ```
